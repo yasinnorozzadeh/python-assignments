@@ -7,14 +7,14 @@ word = random.choice(words)
 word = word.lower()
 print ("_ " * len(word) , ":")
 test = -1
-while not joon == 1:
-    user_charater = input("  | input youre character : ")
+while not joon <= 0:
+    user_charater = input("input youre character : ").lower()
     if user_charater in word :
         true_ch.append(user_charater)
-        print("youre input true character")
+        print("youre input true character\n")
     else:
         joon -= 1
-        print("no |" , "youre score:" , joon)
+        print("no |" , "youre score: " , joon)
     for i in range(len(word)):
         if word[i] in true_ch:
             print(word[i],end="") 
@@ -22,6 +22,6 @@ while not joon == 1:
             print("_ ",end="")
         test += 1
     if len(word) == len(true_ch) :
-        print("|" , word , "|" , "__ you win __")
+        print("|" , "__ you win __", "|", word)
         exit()
 print("| youre lose |" , word)
