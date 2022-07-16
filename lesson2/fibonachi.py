@@ -1,4 +1,4 @@
-n = int(input('''input number => '''))
+n = int(input('input number of fibonachi list => '))
 fibonachi = []
 for f in range(n):
     if f < 2 :
