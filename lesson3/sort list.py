@@ -19,4 +19,4 @@ if tedad != 0:
             print("sort :)")
             exit()
 else:
-    print("!! dont sort becuz for sort requires 2 numbers !!")
+    print("!! dont sort becuse for sort requires 2 numbers !!")
