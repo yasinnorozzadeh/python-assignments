@@ -1,9 +1,12 @@
-sum_list_user = 0
+sum=0
 while True:
-    user_input = int(input("__exit__ = -1       input number : "))
-    if user_input >= 0 :
-        sum_list_user += user_input
-        print("sum numbers :" , sum_list_user )
-    else:
-        print("_____exit______")
+    user_number = input("__exit__ and __sum__ = exit\nEnter number:")
+    if user_number == "exit":
+        if sum == 0:
+            print("sum:", sum)
+            exit()
         break
+    else:
+        sum += float(user_number)
+    print("sum : ", sum)
+print("sum : ", sum)
