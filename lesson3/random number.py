@@ -1,8 +1,8 @@
 import random
 list=[]
-tedad = int(input("input number of numbers in list : "))
-while tedad == len(list) :
-    s = random.randint(0 , 31)
-    if s not in list:
-       list.append(s)
-print( list )
+len_n = int(input("input len of numbers in list : "))
+while len_n != len(list) :
+    numer_add = random.randint(0 , 31)
+    if numer_add not in list:
+        list.append(numer_add)
+print(list)
