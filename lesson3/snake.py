@@ -18,7 +18,7 @@ else:
             i += 2
             if n < i :
                 exit()
-            print("#" , end = "" )
+            print("#" , end = "")
             if n < i :
                 exit()
             print("*" , end = "")
