@@ -1,4 +1,3 @@
-
 n = int(input("input number : "))
 kh_pas = [[None for i in range(n)] for i in range(n)] 
 for i in range(n):
