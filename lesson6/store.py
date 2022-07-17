@@ -79,8 +79,7 @@ def Buy():
                     PRODUCTS[i]["count"] = int(PRODUCTS[i]["count"]) - number
                 else:
                     print(int(PRODUCTS[i]["count"]))
-
-
+                    
         repeat_buy = input("do you buy enother product?(Y/N)\n")
         if repeat_buy == "n" or "N":
             break
