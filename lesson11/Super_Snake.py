@@ -61,18 +61,22 @@ class Snake(arcade.Sprite):
         self.center_y += self.speed * self.change_y
 
     def score_food(self, snake_food):
-        if snake_food == "aplle":
+        if snake_food == "apple":
             self.snake_score += 1
             self.length += 2
-            self.speed += 0.5
+            self.speed += 0.05
         elif snake_food == "pear":
             self.snake_score += 2
-            self.length += 4
-            self.speed += 1
+            self.length += 3
+            self.speed += 0.5
         elif snake_food == "poop":
             self.snake_score -= 1
-            self.speed -= 1
-            self.body.pop()
+            if self.snake_score == 0:
+                arcade.draw_text('GAME OVER', width//2, height//2, arcade.color.BLACK, 5 * 5, width=width, align='left')
+                arcade.exit()
+            else:
+                self.speed -= 1
+                self.body.pop()
 
 class Game(arcade.Window):
     def __init__ (self):
