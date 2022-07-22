@@ -1,8 +1,8 @@
-number1 = int(input('''input number1 for tryangel =>
+number1 = int(input('''input number1 for triangel =>
 '''))
-number2 = int(input('''input number2 for tryangel =>
+number2 = int(input('''input number2 for triangel =>
 '''))
-number3 = int(input('''input number3 for tryangel =>
+number3 = int(input('''input number3 for triangel =>
 '''))
 if number1 == 0 and number2 == 0 and number3 == 0:
     print("f")
