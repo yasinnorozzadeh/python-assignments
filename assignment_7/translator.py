@@ -19,10 +19,9 @@ def Add():
         new_english_word = input("enter english word:\n")
         new_persian_word = input("enter persian word:\n")
         new_dict_words = {}
-        for i in range(len(WORDS_LIST)):
-            new_dict_words["english"] = new_english_word
-            new_dict_words["persian"] = new_persian_word
-            WORDS_LIST.append(new_dict_words)
+        new_dict_words["english"] = new_english_word
+        new_dict_words["persian"] = new_persian_word
+        WORDS_LIST.append(new_dict_words)
         repeat = input("do you want to translate agane?(Y/N)")
         if repeat == "N" or repeat == "n":
             break
@@ -51,28 +50,28 @@ def Choice():
         print("number is not in the list, please enter the number\n")
 def Persian_2_English():
     while True:
-        search_persian_word = input('enter persian word:\n').lower().split(" ")
+        search_persian_word = input('enter persian word:\n').lower().split(".")
         for s in range(len(search_persian_word)):
-            for i in range(len(WORDS_LIST)):
-                if search_persian_word[s] == WORDS_LIST[i]['persian']:
-                    print(WORDS_LIST[i]['english'], end=" ")
-                    break
-        print()
-        repeat = input("do you want to translate agane?(Y/N)")
+            search_persian_word2 = search_persian_word[s].split(" ")
+            for k in range(len(search_persian_word2)):
+                for i in range(len(WORDS_LIST)):
+                    if search_persian_word2[k] == WORDS_LIST[i]['persian']:
+                        print(WORDS_LIST[i]['english'], end=" ")
+                        break
+        repeat = input("\ndo you want to translate agane?(Y/N)")
         if repeat == "N" or repeat == "n":
             break
 def Engelish_2_Persian():
     while True:
         search_english_word = input('enter english word:').lower().split(".")
         for j in range(len(search_english_word)):
-            search_english_word = search_english_word[j].split(" ")
-            for s in range(len(search_english_word)):    
+            search_english_word2 = search_english_word[j].split(" ")
+            for s in range(len(search_english_word2)):    
                 for i in range(len(WORDS_LIST)):
-                    if search_english_word[s] == WORDS_LIST[i]['english']:
+                    if search_english_word2[s] == WORDS_LIST[i]['english']:
                         print(WORDS_LIST[i]['persian'], end=" ")
                         break
-        print()
-        repeat = input("do you want to translate agane?(Y/N)")
+        repeat = input("\ndo you want to translate agane?(Y/N)")
         if repeat == "N" or repeat == "n":
             break
 
