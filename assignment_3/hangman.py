@@ -8,13 +8,16 @@ word = word.lower()
 print ("_ " * len(word) , ":")
 test = -1
 while not score <= 0:
-    user_charater = input("input youre character : ").lower()
+    if len(word) == len(true_ch) :
+        print("|" , "__ you win __", "|", word)
+        exit()
+    user_charater = input("\t input youre character : ").lower()
     if user_charater in word :
         true_ch.append(user_charater)
-        print("youre input true character\n")
+        print("\t youre input true character\n")
     else:
         score -= 1
-        print("no |" , "youre score: " , score)
+        print("no |" , "\tyoure score: " , score)
     for i in range(len(word)):
         if word[i] in true_ch:
             print(word[i],end="") 
