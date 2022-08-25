@@ -99,25 +99,25 @@ class HelloWorld(QMainWindow):
     def AC_n(self):
         self.ui.text_box.setText("")
     def tan_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.tan(self.num_1)))
     def cot_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.cos(self.num_1)))
     def sin_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.sin(self.num_1)))
     def cos_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.cos(self.num_1)))
     def sqrt_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.sqrt(self.num_1)))
     def log_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.ui.text_box.setText(str(math.log(self.num_1)))
     def abc_n(self):
-        self.num_1 = int(self.ui.text_box.text())
+        self.num_1 = float(self.ui.text_box.text())
         self.abc = self.num_1 - self.num_1*2
         self.ui.text_box.setText(str(self.abc))
 
